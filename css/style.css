@@ -1,27 +1,61 @@
 #up {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
     margin-top: 0;
-    ali
+    width: 0;
+    height: 0;
+    top:0;
+    border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 50px solid #0EBBD9;
+    display: inline-block;
 }
 #down {
-    position: relative;
-    margin-top: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 50px solid #0EBBD9;
+    
+    
 }
 #right {
-    position: relative;
-    margin-top: 0;
+    position: absolute;
+    margin-top:-50px;
+    top: 50%;
+    right:0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 50px solid #0EBBD9;
 }
 #left {
-    position: relative;
-    margin-top: 0;
+    position: absolute;
+    margin-top:-50px;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-right: 50px solid #0EBBD9;
 }
 .streamming {
     background-color: black;
-    position: relative;
+    position: absolute;
+    left:50%;
+    margin-left: -240px;
     height:480px;
     width:640px;
 }
-.control {
+
+#panel {
     color: white;
     background: rgba(247, 133, 13, 0.87);
     background-image: -webkit-linear-gradient(top, #ebcfa3, rgba(247, 133, 13, 0.87), rgba(247, 133, 13, 0.87));
@@ -31,4 +65,15 @@
     /*position: relative;*/
     padding: 10px 17px 10px 17px;
     font-size: 10rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: -64px;
+    margin-left: -64px;
+    
+}
+body {
+    background: #1BCB2E;
 }
