@@ -1,50 +1,50 @@
 #up {
     position: absolute;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -70px;
     margin-top: 0;
     width: 0;
     height: 0;
     top:0;
-    border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 50px solid #0EBBD9;
+    border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-bottom: 70px solid #0EBBD9;
     display: inline-block;
 }
 #down {
     position: absolute;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -70px;
     width: 0;
     height: 0;
     bottom: 0;
-    border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-top: 50px solid #0EBBD9;
+    border-left: 70px solid transparent;
+	border-right: 70px solid transparent;
+	border-top: 70px solid #0EBBD9;
     
     
 }
 #right {
     position: absolute;
-    margin-top:-50px;
+    margin-top:-70px;
     top: 50%;
     right:0;
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
-	border-bottom: 50px solid transparent;
-	border-left: 50px solid #0EBBD9;
+    border-top: 70px solid transparent;
+	border-bottom: 70px solid transparent;
+	border-left: 70px solid #0EBBD9;
 }
 #left {
     position: absolute;
-    margin-top:-50px;
+    margin-top:-70px;
     top: 50%;
     left: 0;
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
-	border-bottom: 50px solid transparent;
-	border-right: 50px solid #0EBBD9;
+    border-top: 70px solid transparent;
+	border-bottom: 70px solid transparent;
+	border-right: 70px solid #0EBBD9;
 }
 .streamming {
     background-color: black;
@@ -66,7 +66,7 @@
     padding: 10px 17px 10px 17px;
     font-size: 10rem;
     position: absolute;
-    top: 60%;
+    bottom: 0;
     left: 50%;
     width: 250px;
     height: 250px;
@@ -75,5 +75,5 @@
     
 }
 body {
-    background: #1BCB2E;
+    
 }
