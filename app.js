@@ -18,14 +18,15 @@ function handler(req, res) {
 function puts(error, stdout, stderr) { sys.puts(stdout) }
 io.sockets.on('connection', function(socket){
     socket.on('motorControl', function(pos) {
-        if(pos=='up')    
-            exec("ls -al", puts);
+        io.sockets.emit('motorLog',pos);
+        if(pos=='up')
+            exec("echo up", puts);
         else if (pos=='down')
-            exec("df", puts);
+            exec("echo down", puts);
         else if (pos=='right')
-            exec("pwd", puts);
+            exec("echo right", puts);
         else if (pos=='left')
-            exec("whoami", puts);
+            exec("echo left", puts);
     });
 });
             

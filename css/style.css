@@ -47,7 +47,7 @@
 	border-right: 70px solid #0EBBD9;
 }
 .streamming {
-    background-color: black;
+/*    background-color: gray;*/
     position: absolute;
     left:50%;
     margin-left: -240px;
@@ -74,6 +74,6 @@
     margin-left: -64px;
     
 }
-body {
+#status{
     
 }
