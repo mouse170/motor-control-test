@@ -20,17 +20,17 @@ function motorLeft(){
         ctx.fillStyle = '#444';
         ctx.fillText('Loading...', canvas.width/2-30, canvas.height/3);
         // Setup the WebSocket connection and start the player
-        // var client = new WebSocket( 'ws://example.com:8084/' );
-        // var player = new jsmpeg(client, {canvas:canvas});
+         var client = new WebSocket( 'ws://example.com:8084/' );
+         var player = new jsmpeg(client, {canvas:canvas});
 socket.on('motorLog', function(pos) {
     if(pos=="up"){
-        document.getElementById("status").innerHTML = "Status:Up";
+        document.getElementById("status").innerHTML = "Last Status:Up";
     }else if(pos=="down"){
-        document.getElementById("status").innerHTML = "Status:Down";
+        document.getElementById("status").innerHTML = "Last Status:Down";
     }else if(pos=="left"){
-        document.getElementById("status").innerHTML = "Status:Left";
+        document.getElementById("status").innerHTML = "Last Status:Left";
     }else if(pos=="right"){
-        document.getElementById("status").innerHTML = "Status:Right";
+        document.getElementById("status").innerHTML = "Last Status:Right";
     }
 });
 
