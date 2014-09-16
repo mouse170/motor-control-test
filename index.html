@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Motor Control</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/motor.js"></script>
+    <script type="text/javascript" src="http://localhost:8124/socket.io/socket.io.js"></script>
 </head>
 
 <body>
@@ -13,10 +15,10 @@
 	</div>
    <div id="outer">
     <div id="panel">
-        <span class="control" type="button" id="up" value="↑"></span>
-        <span class="control" type="button" id="down" value="↓"></span>
-        <span class="control" type="button" id="right" value="→"></span>
-        <span class="control" type="button" id="left" value="←"></span>
+        <span class="control" type="button" id="up" value="↑" onclick="motorUp()"></span>
+        <span class="control" type="button" id="down" value="↓" onclick="motorDown()"></span>
+        <span class="control" type="button" id="right" value="→" onclick="motorRight()"></span>
+        <span class="control" type="button" id="left" value="←" onclick="motorLeft()"></span>
      </div>
     </div>
 </body>
