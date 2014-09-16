@@ -16,17 +16,26 @@ function handler(req, res) {
     });
 }
 function puts(error, stdout, stderr) { sys.puts(stdout) }
+
 io.sockets.on('connection', function(socket){
     socket.on('motorControl', function(pos) {
-        io.sockets.emit('motorLog',pos);
-        if(pos=='up')
+        
+        if(pos=='up'){
             exec("echo up", puts);
-        else if (pos=='down')
+            io.sockets.emit('motorLog',pos);
+        }
+        else if (pos=='down'){
             exec("echo down", puts);
-        else if (pos=='right')
+            io.sockets.emit('motorLog',pos);
+        }
+        else if (pos=='right'){
             exec("echo right", puts);
-        else if (pos=='left')
+            io.sockets.emit('motorLog',pos);
+        }
+        else if (pos=='left'){
             exec("echo left", puts);
+            io.sockets.emit('motorLog',pos);
+        }
     });
 });
             
