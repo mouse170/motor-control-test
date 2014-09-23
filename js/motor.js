@@ -20,7 +20,7 @@ function motorLeft(){
         ctx.fillStyle = '#444';
         ctx.fillText('Loading...', canvas.width/2-30, canvas.height/3);
         // Setup the WebSocket connection and start the player
-         var client = new WebSocket( 'ws://example.com:8084/' );
+         var client = new WebSocket( 'ws://140.127.194.124:8084/' );
          var player = new jsmpeg(client, {canvas:canvas});
 socket.on('motorLog', function(pos) {
     if(pos=="up"){

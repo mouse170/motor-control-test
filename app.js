@@ -3,6 +3,7 @@ var exec = require('child_process').exec;
 var app = require('http').createServer(handler);
 var io = require('socket.io').listen(app);
 var fs = require('fs');
+var piblaster = require('pi-blaster.js');
 app.listen(8124);
 
 function handler(req, res) {
@@ -26,18 +27,23 @@ io.sockets.on('connection', function(socket){
         }
         else if (pos=='down'){
             exec("echo down", puts);
-            io.sockets.emit('motorLog',pos);
+            io.sockets.emit('motorLog',pos); 
+	    releaseMotor();
         }
         else if (pos=='right'){
             exec("echo right", puts);
             io.sockets.emit('motorLog',pos);
+	    releaseMotor();
         }
         else if (pos=='left'){
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
+	    releaseMotor();
         }
     });
 });
+
+
             
     
     
