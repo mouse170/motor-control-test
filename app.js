@@ -28,17 +28,17 @@ io.sockets.on('connection', function(socket){
         else if (pos=='down'){
             exec("echo down", puts);
             io.sockets.emit('motorLog',pos); 
-	    releaseMotor();
+	    //releaseMotor();
         }
         else if (pos=='right'){
             exec("echo right", puts);
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
+	    //releaseMotor();
         }
         else if (pos=='left'){
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
+	    //releaseMotor();
         }
     });
 });
