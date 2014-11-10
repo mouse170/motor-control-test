@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://localhost:8124');
+var socket = io.connect('http://140.127.194.124:8124');
 
 function motorUp(){
     socket.emit('motorControl', "up");
