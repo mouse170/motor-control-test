@@ -1,6 +1,6 @@
 #up {
-	display:none;
-   /* position: absolute;
+	/*display:none;*/
+    position: absolute;
     left: 50%;
     margin-left: -70px;
     margin-top: 0;
@@ -11,11 +11,11 @@
 	border-right: 70px solid transparent;
 	border-bottom: 70px solid #0EBBD9;
     display: inline-block;
-   */
+
 }
 #down {
-	display:none;
-/*
+	/*display:none;*/
+
     position: absolute;
     left: 50%;
     margin-left: -70px;
@@ -25,12 +25,12 @@
     border-left: 70px solid transparent;
 	border-right: 70px solid transparent;
 	border-top: 70px solid #0EBBD9;
-*/   
+
     
 }
 #right {
-	display:none;
-   /* position: absolute;
+	/*display:none;*/
+    position: absolute;
     margin-top:-70px;
     top: 50%;
     right:0;
@@ -39,11 +39,11 @@
     border-top: 70px solid transparent;
 	border-bottom: 70px solid transparent;
 	border-left: 70px solid #0EBBD9;
-	*/
+
 }
 #left {
-	display:none;
-    /*position: absolute;
+	/*display:none;*/
+    position: absolute;
     margin-top:-70px;
     top: 50%;
     left: 0;
@@ -52,27 +52,26 @@
     border-top: 70px solid transparent;
 	border-bottom: 70px solid transparent;
 	border-right: 70px solid #0EBBD9;
-*/
+
 }
 .streamming {
 /*    background-color: gray;*/
     position: absolute;
-   height: 50%;
+    height: 50%;
     width: 90%;
-    
     background: black;
 }
 
 #panel {
-    display:none;
-/*
+    /*display:none;*/
+
     color: white;
     background: rgba(247, 133, 13, 0.87);
     background-image: -webkit-linear-gradient(top, #ebcfa3, rgba(247, 133, 13, 0.87), rgba(247, 133, 13, 0.87));
     background-image: -moz-linear-gradient(top, #ebcfa3, rgba(247, 133, 13, 0.87), rgba(247, 133, 13, 0.87));
     background-image: -ms-linear-gradient(top, #ebcfa3, rgba(247, 133, 13, 0.87), rgba(247, 133, 13, 0.87));
     background-image: -o-linear-gradient(top, #ebcfa3, rgba(247, 133, 13, 0.87), rgba(247, 133, 13, 0.87));
-    /*position: relative;*/
+    position: relative;
     padding: 10px 17px 10px 17px;
     font-size: 10rem;
     position: absolute;
