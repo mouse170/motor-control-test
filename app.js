@@ -23,32 +23,31 @@ io.sockets.on('connection', function(socket){
         
         if(pos=='up'){
             //debug
-            //exec("echo up", puts);
+            exec("echo up", puts);
             //control
             exec("node ./assets/scripts/horizontal.js");
             io.sockets.emit('motorLog',pos);
-            releaseMotor();
         }
         else if (pos=='down'){
             //debug
             exec("echo down", puts);
             exec("node ./assets/scripts/stand.js");
             io.sockets.emit('motorLog',pos); 
-	    releaseMotor();
         }
         else if (pos=='right'){
             //debug
-            //exec("echo right", puts);
+            exec("echo right", puts);
             exec("node ./assets/scripts/vertical.js");
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
         }
         else if (pos=='left'){
             //debug
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
         }
+	
+           setInterval(releaseMotor, 5000);
+	   console.log('release');
     });
 
     //record motor's degree
