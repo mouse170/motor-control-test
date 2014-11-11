@@ -27,27 +27,26 @@ io.sockets.on('connection', function(socket){
             //control
             exec("node ./assets/scripts/horizontal.js");
             io.sockets.emit('motorLog',pos);
-            releaseMotor();
         }
         else if (pos=='down'){
             //debug
             exec("echo down", puts);
             exec("node ./assets/scripts/stand.js");
-            io.sockets.emit('motorLog',pos); 
-	    releaseMotor();
+            io.sockets.emit('motorLog',pos);
         }
         else if (pos=='right'){
             //debug
             //exec("echo right", puts);
             exec("node ./assets/scripts/vertical.js");
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
         }
         else if (pos=='left'){
             //debug
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
-	    releaseMotor();
+        }
+        else if (pos=='release'){
+            exec("./asset/scripts/release.sh", puts);
         }
     });
 
@@ -62,10 +61,6 @@ io.sockets.on('connection', function(socket){
     });
 
 });
-
-function releaseMotor(){
-    exec("./asset/scripts/release.sh", puts);
-}
 
 
             
