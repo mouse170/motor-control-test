@@ -46,7 +46,8 @@ io.sockets.on('connection', function(socket){
             io.sockets.emit('motorLog',pos);
        }
         else if (pos=='release'){
-            exec("./asset/scripts/release.sh", puts);
+            exec("sh ./assets/scripts/release.sh", puts);
+	    io.sockets.emit('motorLog', pos);
             console.log('release');
         }
 

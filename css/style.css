@@ -85,6 +85,10 @@
     display: block;
 }
 
+#release{
+	display:block;
+}
+
 @media screen and (max-width: 360px) {
     #panel {
         display: none;
