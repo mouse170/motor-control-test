@@ -47,10 +47,9 @@ io.sockets.on('connection', function(socket){
        }
         else if (pos=='release'){
             exec("./asset/scripts/release.sh", puts);
+            console.log('release');
         }
-	
-           setInterval(releaseMotor, 5000);
-	   console.log('release');
+
     });
 
     //record motor's degree
