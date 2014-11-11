@@ -22,26 +22,50 @@ io.sockets.on('connection', function(socket){
     socket.on('motorControl', function(pos) {
         
         if(pos=='up'){
-            exec("echo up", puts);
+            //debug
+            //exec("echo up", puts);
+            //control
+            exec("node ./assets/scripts/horizontal.js");
             io.sockets.emit('motorLog',pos);
+            releaseMotor();
         }
         else if (pos=='down'){
+            //debug
             exec("echo down", puts);
+            exec("node ./assets/scripts/stand.js");
             io.sockets.emit('motorLog',pos); 
-	    //releaseMotor();
+	    releaseMotor();
         }
         else if (pos=='right'){
-            exec("echo right", puts);
+            //debug
+            //exec("echo right", puts);
+            exec("node ./assets/scripts/vertical.js");
             io.sockets.emit('motorLog',pos);
-	    //releaseMotor();
+	    releaseMotor();
         }
         else if (pos=='left'){
+            //debug
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
-	    //releaseMotor();
+	    releaseMotor();
         }
     });
+
+    //record motor's degree
+    socket.on('motorPosition', function(position) {
+        if (position == 'vertical'){
+            io.socket.emit('posLog', position);
+        }
+        else if (position=='horizontal') {
+            io.socket.emit('posLog', position);
+        }
+    });
+
 });
+
+function releaseMotor(){
+    exec("./asset/scripts/release.sh", puts);
+}
 
 
             
