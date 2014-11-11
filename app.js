@@ -25,24 +25,25 @@ io.sockets.on('connection', function(socket){
             //debug
             exec("echo up", puts);
             //control
-            exec("node ./assets/scripts/horizontal.js");
+            exec("node ./assets/scripts/up.js");
             io.sockets.emit('motorLog',pos);
         }
         else if (pos=='down'){
             //debug
             exec("echo down", puts);
-            exec("node ./assets/scripts/stand.js");
+            exec("node ./assets/scripts/down.js");
            io.sockets.emit('motorLog',pos); 
         }
         else if (pos=='right'){
             //debug
             exec("echo right", puts);
-            exec("node ./assets/scripts/vertical.js");
+            exec("node ./assets/scripts/right.js");
             io.sockets.emit('motorLog',pos);
         }
         else if (pos=='left'){
             //debug
             exec("echo left", puts);
+            exec("node ./assets/script/left.js");
             io.sockets.emit('motorLog',pos);
        }
         else if (pos=='release'){
