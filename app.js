@@ -23,7 +23,7 @@ io.sockets.on('connection', function(socket){
         
         if(pos=='up'){
             //debug
-            //exec("echo up", puts);
+            exec("echo up", puts);
             //control
             exec("node ./assets/scripts/horizontal.js");
             io.sockets.emit('motorLog',pos);
@@ -32,11 +32,11 @@ io.sockets.on('connection', function(socket){
             //debug
             exec("echo down", puts);
             exec("node ./assets/scripts/stand.js");
-            io.sockets.emit('motorLog',pos);
+           io.sockets.emit('motorLog',pos); 
         }
         else if (pos=='right'){
             //debug
-            //exec("echo right", puts);
+            exec("echo right", puts);
             exec("node ./assets/scripts/vertical.js");
             io.sockets.emit('motorLog',pos);
         }
@@ -44,10 +44,13 @@ io.sockets.on('connection', function(socket){
             //debug
             exec("echo left", puts);
             io.sockets.emit('motorLog',pos);
-        }
+       }
         else if (pos=='release'){
             exec("./asset/scripts/release.sh", puts);
         }
+	
+           setInterval(releaseMotor, 5000);
+	   console.log('release');
     });
 
     //record motor's degree

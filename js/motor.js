@@ -13,6 +13,9 @@ function motorRight(){
 function motorLeft(){
     socket.emit('motorControl', "left");
 }
+function release(){
+    socket.emit('motorControl', "release");
+}
 
         // Show loading notice
         var canvas = document.getElementById('videoCanvas');
@@ -31,6 +34,8 @@ socket.on('motorLog', function(pos) {
         document.getElementById("status").innerHTML = "Last Status:Left";
     }else if(pos=="right"){
         document.getElementById("status").innerHTML = "Last Status:Right";
+    }else if(pos=="release"){
+	document.getElementById("status").innerHTML = "Last Status:Release";
     }
 });
 
