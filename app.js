@@ -43,7 +43,7 @@ io.sockets.on('connection', function(socket){
         else if (pos=='left'){
             //debug
             exec("echo left", puts);
-            exec("node ./assets/script/left.js");
+            exec("node ./assets/scripts/left.js");
             io.sockets.emit('motorLog',pos);
        }
         else if (pos=='release'){
