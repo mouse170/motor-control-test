@@ -18,6 +18,6 @@
   "homepage": "https://github.com/mouse170/motor-control-test",
   "dependencies": {
     "socket.io": "^1.1.0",
-    "ws": "^0.4.32"
+    "ws": "^7.2.0"
   }
 }
